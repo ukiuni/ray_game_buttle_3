@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>LINE SLASH 一閃</title>
+<meta name="description" content="線を引いて竜を斬れ！ 1対1の3Dターン制バトル">
+<meta name="theme-color" content="#140a1e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LINE SLASH">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<canvas id="ink"></canvas>
+
+<div id="hud" class="hidden">
+  <div class="bar hero">
+    <div class="name">勇者</div>
+    <div class="track"><div class="fill" id="hpHero"></div></div>
+    <div class="num" id="hpHeroNum"></div>
+  </div>
+  <div class="bar mon">
+    <div class="name" id="monName"></div>
+    <div class="track"><div class="fill" id="hpMon"></div></div>
+    <div class="num" id="hpMonNum"></div>
+  </div>
+  <div id="stageLabel"></div>
+  <div id="inkGauge"><span>INK</span><div class="track"><div id="inkFill"></div></div></div>
+  <div id="hint"></div>
+</div>
+<div id="banner"></div>
+<div id="alert">！</div>
+<div id="dmgLayer"></div>
+<div id="vignette"></div>
+
+<div id="title" class="screen">
+  <div class="logo"><span>LINE</span> SLASH<small>― 一 閃 ―</small></div>
+  <p class="lead">線を引け。その軌跡が、竜を斬る。</p>
+  <button id="btnStart" type="button">バトル開始</button>
+  <ul class="how">
+    <li>自分のターン：画面に線を引くと、勇者がその線の通りに駆け抜けて斬る</li>
+    <li>光る<b>弱点</b>を通るとクリティカル。何度も出入りするとコンボ倍率アップ</li>
+    <li>敵のターン：「！」が出たらタップでガード</li>
+    <li>勝つたびに次の竜が自動で現れる。負けるまで連勝を伸ばせ</li>
+  </ul>
+  <div id="bestTitle"></div>
+</div>
+
+<div id="over" class="screen hidden">
+  <div class="logo over">GAME OVER</div>
+  <div id="overWins"></div>
+  <div id="overStage"></div>
+  <div id="overBest"></div>
+  <button id="btnRetry" type="button">もう一度挑戦</button>
+  <button id="btnTitle" type="button" class="ghost">タイトルへ</button>
+</div>
+<div id="toast"></div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
