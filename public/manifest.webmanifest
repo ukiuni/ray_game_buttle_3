@@ -1,7 +1,7 @@
 {
   "name": "LINE SLASH 一閃",
   "short_name": "LINE SLASH",
-  "description": "線を引いて竜を斬れ！ 1対1の3Dターン制バトル",
+  "description": "線を引いて敵を斬れ！ 1対1の3Dリアルタイムバトル",
   "lang": "ja",
   "start_url": "./",
   "scope": "./",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>LINE SLASH 一閃</title>
-<meta name="description" content="線を引いて竜を斬れ！ 1対1の3Dターン制バトル">
+<meta name="description" content="線を引いて敵を斬れ！ 1対1の3Dリアルタイムバトル">
 <meta name="theme-color" content="#140a1e">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -42,13 +42,14 @@
 
 <div id="title" class="screen">
   <div class="logo"><span>LINE</span> SLASH<small>― 一 閃 ―</small></div>
-  <p class="lead">線を引け。その軌跡が、竜を斬る。</p>
+  <p class="lead">線を引け。その軌跡が、敵を斬る。</p>
   <button id="btnStart" type="button">バトル開始</button>
   <ul class="how">
-    <li>自分のターン：画面に線を引くと、勇者がその線の通りに駆け抜けて斬る</li>
-    <li>光る<b>弱点</b>を通るとクリティカル。何度も出入りするとコンボ倍率アップ</li>
-    <li>敵のターン：「！」が出たらタップでガード</li>
-    <li>勝つたびに次の竜が自動で現れる。負けるまで連勝を伸ばせ</li>
+    <li>ターン制ではない。<b>いつでも</b>画面に線を引くと、勇者がその線の通りに駆け抜けて斬る</li>
+    <li>引ける線は<b>1本だけ</b>。攻撃が終わって勇者が戻るまで次の線は引けない(敵も同じ)</li>
+    <li>敵も<b>赤い線</b>を引いて突進してくる。その場にいなければ回避、タップでガード</li>
+    <li>光る<b>弱点</b>を通るとクリティカル。敵が線を引いている最中なら攻撃を中断させる</li>
+    <li>勝つたびに次の敵(竜・巨人・死神…)が自動で現れる。負けるまで連勝を伸ばせ</li>
   </ul>
   <div id="bestTitle"></div>
 </div>
